@@ -129,6 +129,8 @@ end
 # Write code here
 #spec/hashketball_spec.rb -e num_points_scored
 def num_points_scored(player_name)
+  #Build a method, `num_points_scored` that takes in an argument of a player's
+    #name and returns the number of points scored for that player.
 game_hash.values.each do |team|
     team[:players].each do |player|
       return player[:points] if player.has_value?(player_name)
@@ -137,6 +139,8 @@ game_hash.values.each do |team|
 end
 
 def shoe_size (player_name)
+  #Build a method, `shoe_size`, that takes in an argument of a player's name and
+    #returns the shoe size for that player.
   game_hash.values.each do |team|
       team[:players].each do |player|
         return player[:shoe] if player.has_value?(player_name)
@@ -184,6 +188,8 @@ def player_numbers(team_name)
  end
 
  def player_stats(name)
+   #Build a method, `player_stats`, that takes in an argument of a player's name
+     #and returns a hash of that player's stats.
 game_hash.each do |key, value|
 value[:players].each do |player_name|
   if name == player_name[:player_name]
